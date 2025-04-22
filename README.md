@@ -116,4 +116,5 @@ The goal of this project was to practice real-time communication using Socket.IO
 
 
 ## Author
-https://github.com/kosar726
+
+- **Kosar** - [GitHub Profile](https://github.com/kosar726)
