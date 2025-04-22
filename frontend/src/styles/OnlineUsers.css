@@ -1,0 +1,95 @@
+/* Online Users Container */
+.online-users {
+  padding: 15px;
+  background-color: #252D2E;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Title */
+.online-users h3 {
+  font-size: 18px;
+  color: #e1e1e1;
+  margin-bottom: 10px;
+}
+
+/* Users List */
+.online-users ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.online-users li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #333;
+  color: #e1e1e1;
+  font-size: 14px;
+  transition: background-color 0.2s, transform 0.1s;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.online-users li:hover {
+  background-color: #3a3a3a;
+  transform: translateX(5px);
+}
+
+.online-users li.active {
+  background-color: #3390EC;
+  color: white;
+}
+
+/* Online Status Indicator */
+.online-users li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Support Role Badge */
+.online-users li span.support-badge {
+  background-color: #FF4444;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+/* No Users Message */
+.online-users p {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .online-users {
+    padding: 10px;
+  }
+
+  .online-users h3 {
+    font-size: 16px;
+  }
+
+  .online-users li {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

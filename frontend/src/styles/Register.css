@@ -1,0 +1,135 @@
+/* Register Container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  padding: 20px;
+}
+
+/* Register Form */
+.register-form {
+  background-color: #1C2526;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.register-form h2 {
+  font-size: 24px;
+  color: #e1e1e1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Error Message */
+.register-form .error {
+  color: #FF4444;
+  font-size: 14px;
+  text-align: center;
+  background-color: #3a1c1c;
+  padding: 8px;
+  border-radius: 5px;
+  animation: fadeInError 0.3s ease-in;
+}
+
+/* Form Fields */
+.register-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-form label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.register-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #e1e1e1;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.register-form input:focus {
+  outline: none;
+  background-color: #3a3a3a;
+}
+
+/* Submit Button */
+.register-form button {
+  padding: 12px;
+  background-color: #4CAF50; /* سبز برای تمایز از ورود */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-form button:hover {
+  background-color: #45A049;
+}
+
+/* Login Link */
+.register-form p {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+
+.register-form a {
+  color: #3390EC;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.register-form a:hover {
+  color: #2A77C9;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInError {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .register-form h2 {
+    font-size: 20px;
+  }
+
+  .register-form input,
+  .register-form button {
+    font-size: 13px;
+  }
+
+  .register-form .error,
+  .register-form p {
+    font-size: 12px;
+  }
+}

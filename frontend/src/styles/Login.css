@@ -1,0 +1,135 @@
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  padding: 20px;
+}
+
+/* Login Form */
+.login-form {
+  background-color: #1C2526;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  color: #e1e1e1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Error Message */
+.login-form .error {
+  color: #FF4444;
+  font-size: 14px;
+  text-align: center;
+  background-color: #3a1c1c;
+  padding: 8px;
+  border-radius: 5px;
+  animation: fadeInError 0.3s ease-in;
+}
+
+/* Form Fields */
+.login-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.login-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #e1e1e1;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.login-form input:focus {
+  outline: none;
+  background-color: #3a3a3a;
+}
+
+/* Submit Button */
+.login-form button {
+  padding: 12px;
+  background-color: #3390EC;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #2A77C9;
+}
+
+/* Register Link */
+.login-form p {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+
+.login-form a {
+  color: #3390EC;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-form a:hover {
+  color: #2A77C9;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInError {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 13px;
+  }
+
+  .login-form .error,
+  .login-form p {
+    font-size: 12px;
+  }
+}
